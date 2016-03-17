@@ -1,0 +1,13 @@
+<div style>
+  <h2><%= @product.name %></h2>
+  <h3><%= @product.sale_message %></h3>
+  <h3>Price: $<%= @product.price %></h3>
+  <h4>Tax $<%= @product.tax.to_i %></h4>
+  <h4>Total $<%= @product.total.to_i %></h4>
+  <h3>Stock: <%= @product.stock %></h3>
+</div>
+  <img src=<%= @product.image %>>
+  <h3>Description: <%= @product.description %></h3>
+  <h4><%= link_to "Return", "/products" %></h4>
+  <h4><%= link_to "Edit", "/products/#{@product.id}/edit" %></h4>
+  <h4><%= link_to "Delete", "/products/#{@product.id}", method: :delete %></h4>

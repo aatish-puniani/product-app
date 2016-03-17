@@ -1,0 +1,15 @@
+<h1>Synths</h1>
+<br>
+<h4><%= link_to "Add a synth", "/products/new" %></h4>
+<br>
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-md-3 product">
+    <div class="well">
+      <h2><a href="/products/<%= product.id %>"><%= product.name %></a></h2>
+      <h3>$<%= product.price %></h3>
+      <%= image_tag product.image %>
+    </div>
+    </div>
+  <% end %>
+</div>
