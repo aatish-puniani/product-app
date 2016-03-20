@@ -11,6 +11,14 @@
     <img src="<%= image.src %>" alt"<%= @product.name %>" class="img-responsive">
     <% end %>
   <h3>Description: <%= @product.description %></h3>
+  <h2>Checkout:</h2>
+  <div class="form-group">
+    <%= label_tag "Quantity" %>
+    <%= text_field_tag :stock %>
+  </div>
+  <div>
+  <%= submit_tag "Buy Now" %>
+  </div>
   <h4><%= link_to "Return", "/products" %></h4>
   <h4><%= link_to "Edit", "/products/#{@product.id}/edit" %></h4>
   <h4><%= link_to "Delete", "/products/#{@product.id}", method: :delete %></h4>
