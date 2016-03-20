@@ -8,7 +8,7 @@
   <h3>Stock: <%= @product.stock %></h3>
 </div>
   <% @product.images.each do |image| %>
-    <img src="<%= image.src %>" alt<%= @product.name %>>
+    <img src="<%= image.src %>" alt"<%= @product.name %>" class="img-responsive">
     <% end %>
   <h3>Description: <%= @product.description %></h3>
   <h4><%= link_to "Return", "/products" %></h4>
