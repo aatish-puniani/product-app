@@ -1,4 +1,8 @@
 class Product < ActiveRecord::Base
+  belongs_to :supplier
+  has_many :images
+  has_many :orders
+
   def sale_message
     if price < 200
       "Discount item!"

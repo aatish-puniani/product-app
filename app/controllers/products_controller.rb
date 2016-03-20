@@ -24,9 +24,8 @@ class ProductsController < ApplicationController
       name: params[:name],
       price: params[:price],
       description: params[:description],
-      stock: params[:stock],
-      image: params[:image]
-      )
+      stock: params[:stock]
+    )
     redirect_to '/products'
   end
 
@@ -47,8 +46,7 @@ class ProductsController < ApplicationController
     name: params[:name],
     price: params[:price],
     description: params[:description],
-    stock: params[:stock],
-    image: params[:image]
+    stock: params[:stock]
     )
     flash[:success] = "Synth successfully updated!"
     redirect_to "/products/#{@product.id}"
