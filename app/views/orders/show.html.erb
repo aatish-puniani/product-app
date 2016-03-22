@@ -1,0 +1,12 @@
+<div style>
+<h1>Your order:</h1>
+<h2>Order ID:<%= @order.id %></h2>
+<p>Purchased at: <%= @order.created_at %></p>
+<h2>Synth:<%= @order.product.name %></h2>
+<img src="<%= @order.product.images.first.src %>" alt="">
+<h2>Order Quantity:<%= @order.quantity %></h2>
+<h2>Product ID:<%= @order.product_id %></h2>
+<h2>Subtotal:<%= @order.subtotal %></h2>
+<h2>Tax:<%= @order.tax %></h2>
+<h2>Total:<%= @order.total %></h2>
+</div>

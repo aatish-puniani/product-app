@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
   def edit
     product_id = params[:id]
     @product = Product.find_by(id: product_id)
-    end
+  end
 
   def update
     product_id = params[:id]

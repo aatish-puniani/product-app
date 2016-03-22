@@ -12,12 +12,15 @@
     <% end %>
   <h3>Description: <%= @product.description %></h3>
   <h2>Checkout:</h2>
+  <%= form_tag "/orders", method: :post do %>
   <div class="form-group">
-    <%= label_tag "Quantity" %>
-    <%= text_field_tag :stock %>
+    <%= label_tag :quantity %>
+    <%= text_field_tag :quantity %>
+    <%= hidden_field_tag :product_id, @product.id %>
   </div>
   <div>
   <%= submit_tag "Buy Now" %>
+  <% end %>
   </div>
   <h4><%= link_to "Return", "/products" %></h4>
   <h4><%= link_to "Edit", "/products/#{@product.id}/edit" %></h4>
