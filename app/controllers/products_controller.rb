@@ -10,6 +10,9 @@ class ProductsController < ApplicationController
     if discount
       @products = Product.where('price > ?', 500)
     end
+    if params[:category]
+      @products = Category.find_by(name: params[:category]).products
+    end
     random = params[:random]
     if random
       @products = Product.all(limit: 1)
